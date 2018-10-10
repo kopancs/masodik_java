@@ -4,15 +4,15 @@ public class Main {
 	public static void main(String[] args) {
 		int a=Integer.parseInt(args[0]);
 		int i=0;
-		int x=a;
+		int x=0;
 		for(i=1; i<a+1; i++) {
 			if(a%i==0) {
 				System.out.println(a+" osztója "+i);
-				x--;
+				x++;
 			}
 			
 		}
-		if(i==1) {
+		if(x==2) {
 			System.out.println(a+" prím szám");
 		}
 
