@@ -14,8 +14,9 @@ public class Main {
 
 		} catch (InputMismatchException e) {
 			System.out.println("Nem számot adtál meg");
-		} catch (Exception e) {
-			System.out.println("Programfuttatási hiba");
+		
+		}catch(IndexOutOfBoundsException e) {
+			System.out.println("1-7 számok adhatók meg!");
 		}
 
 	}
