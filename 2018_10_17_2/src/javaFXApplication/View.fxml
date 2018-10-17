@@ -2,11 +2,62 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="javaFXApplication.ViewController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaFXApplication.ViewController">
     <children>
-        <Button fx:id="button" layoutX="126" layoutY="90" onAction="#handleButtonAction" text="Click Me!" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" text="" textAlignment="CENTER" />
+      <BorderPane layoutX="300.0" layoutY="200.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="textfieldid" layoutX="41.0" layoutY="28.0" />
+                  <TextField fx:id="textfieldvezeteknev" layoutX="41.0" layoutY="75.0" />
+                  <TextField fx:id="textfieldkeresztnev" layoutX="41.0" layoutY="127.0" />
+                  <Label layoutX="41.0" layoutY="6.0" text="ID" />
+                  <Label layoutX="41.0" layoutY="58.0" text="Vezetéknév" />
+                  <Label layoutX="41.0" layoutY="110.0" text="Keresztnév" />
+                  <Button layoutX="262.0" layoutY="152.0" mnemonicParsing="false" onAction="#hozzaadGomb" text="Hozzáad" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <center>
+            <TableView fx:id="tabla" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="tablaid" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="tablavezeteknev" prefWidth="211.0" text="Vezetéknév" />
+                  <TableColumn fx:id="tablakeresztnev" prefWidth="211.0" text="Keresztnév" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
     </children>
 </AnchorPane>
