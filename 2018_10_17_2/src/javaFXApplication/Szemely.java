@@ -8,6 +8,7 @@ public class Szemely {
 	private SimpleIntegerProperty id;
 	private SimpleStringProperty vezeteknev;
 	private SimpleStringProperty keresztnev;
+	
 	public final SimpleIntegerProperty idProperty() {
 		return this.id;
 	}
