@@ -9,6 +9,12 @@ public class Szemely {
 	private SimpleStringProperty vezeteknev;
 	private SimpleStringProperty keresztnev;
 	
+	public Szemely(int id, String vezeteknev, String keresztnev) {
+		this.id=new SimpleIntegerProperty(id);
+		this.vezeteknev=new SimpleStringProperty(vezeteknev);
+		this.keresztnev=new SimpleStringProperty(keresztnev);
+	}
+	
 	public final SimpleIntegerProperty idProperty() {
 		return this.id;
 	}
