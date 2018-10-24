@@ -16,35 +16,7 @@ import javafx.scene.control.TextField;
 
 public class ViewController implements Initializable{
 
-	 /*class Szemely {
-
-			public Szemely(int i, String string, String string2, String string3) {
-				// TODO Auto-generated constructor stub
-			}
-
-			public Object idProperty() {
-				// TODO Auto-generated method stub
-				return null;
-			}
-
-			public Object vezeteknevProperty() {
-				// TODO Auto-generated method stub
-				return null;
-			}
-
-			public Object keresztnevProperty() {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-			public Object szuletesidatumProprty() {
-				// TODO Auto-generated method stub
-				return null;
-			}
-		
-
-	}*/
-
+	
 	@FXML
     private Label label;
 
@@ -58,7 +30,7 @@ public class ViewController implements Initializable{
     private TextField textfieldkeresztnev;
     
     @FXML
-    private TableColumn<?, ?> tablaszuletesiDatum;
+    private TableColumn<Szemely, String> tablaszuletesiDatum;
 
     @FXML
     private TableView<Szemely> tabla;
@@ -81,6 +53,11 @@ public class ViewController implements Initializable{
 		System.out.println(textfieldvezeteknev.getText());
 		System.out.println(textfieldkeresztnev.getText());
 		System.out.println(szuletesidatumMezo.getText());*/
+    	Szemely szemelyAdd =new Szemely(Integer.parseInt(textfieldid.getText()), 
+    			textfieldvezeteknev.getText(), 
+    			textfieldkeresztnev.getText(), 
+    			szuletesidatumMezo.getText());
+    	adat.add(szemelyAdd);
     }
     private ObservableList<Szemely> adat =FXCollections.observableArrayList();
     
@@ -103,7 +80,7 @@ public class ViewController implements Initializable{
     	tablaid.setCellValueFactory(cellaAdat -> cellaAdat.getValue().idProperty());
     	tablavezeteknev.setCellValueFactory(cellaAdat -> cellaAdat.getValue().vezeteknevProperty());
     	tablakeresztnev.setCellValueFactory(cellaAdat -> cellaAdat.getValue().keresztnevProperty());
-    	tablaszuletesiDatum.setCellFactory(cellaAdat -> cellaAdat.getValue().szuletesidatumProperty());
+    	tablaszuletesiDatum.setCellValueFactory(cellaAdat -> cellaAdat.getValue().szuletesidatumProperty());
     	
     	tabla.setItems(adat);
     }
