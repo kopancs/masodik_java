@@ -26,6 +26,9 @@ public class ViewController implements Initializable{
 
     @FXML
     private TextField textfieldkeresztnev;
+    
+    @FXML
+    private TableColumn<?, ?> tablaszuletesiDatum;
 
     @FXML
     private TableView<Szemely> tabla;
@@ -38,10 +41,16 @@ public class ViewController implements Initializable{
 
     @FXML
     private TableColumn<Szemely, String> tablakeresztnev;
+    
+    @FXML
+    private TextField szuletesidatumMezo;
 
     @FXML
     void hozzaadGomb(ActionEvent event) {
-
+System.out.println(textfieldid.getText());
+System.out.println(textfieldvezeteknev.getText());
+System.out.println(textfieldkeresztnev.getText());
+System.out.println(szuletesidatumMezo.getText());
     }
     private ObservableList<Szemely> adat =FXCollections.observableArrayList();
     

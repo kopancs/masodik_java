@@ -46,6 +46,8 @@
                   <Label layoutX="41.0" layoutY="58.0" text="Vezetéknév" />
                   <Label layoutX="41.0" layoutY="110.0" text="Keresztnév" />
                   <Button layoutX="262.0" layoutY="152.0" mnemonicParsing="false" onAction="#hozzaadGomb" text="Hozzáad" />
+                  <TextField fx:id="szuletesidatumMezo" layoutX="221.0" layoutY="28.0" />
+                  <Label layoutX="221.0" layoutY="6.0" text="Születési dátum" />
                </children>
             </AnchorPane>
          </bottom>
@@ -55,6 +57,7 @@
                 <TableColumn fx:id="tablaid" prefWidth="75.0" text="ID" />
                 <TableColumn fx:id="tablavezeteknev" prefWidth="211.0" text="Vezetéknév" />
                   <TableColumn fx:id="tablakeresztnev" prefWidth="211.0" text="Keresztnév" />
+                  <TableColumn fx:id="tablaszuletesiDatum" prefWidth="211.0" text="Születési dátum" />
               </columns>
             </TableView>
          </center>
