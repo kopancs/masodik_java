@@ -8,11 +8,14 @@ public class Szemely {
 	private SimpleIntegerProperty id;
 	private SimpleStringProperty vezeteknev;
 	private SimpleStringProperty keresztnev;
+	private SimpleStringProperty szuletesidatum;
 	
-	public Szemely(int id, String vezeteknev, String keresztnev) {
+	
+	public Szemely(int id, String vezeteknev, String keresztnev, String szuletesidatum) {
 		this.id=new SimpleIntegerProperty(id);
 		this.vezeteknev=new SimpleStringProperty(vezeteknev);
 		this.keresztnev=new SimpleStringProperty(keresztnev);
+		this.szuletesidatum=new SimpleStringProperty(szuletesidatum);
 	}
 	
 	public final SimpleIntegerProperty idProperty() {
@@ -49,6 +52,14 @@ public class Szemely {
 	
 	public final void setKeresztnev(final String keresztnev) {
 		this.keresztnevProperty().set(keresztnev);
+	}
+
+	public SimpleStringProperty getSzuletesidatum() {
+		return szuletesidatum;
+	}
+
+	public void setSzuletesidatum(SimpleStringProperty szuletesidatum) {
+		this.szuletesidatum = szuletesidatum;
 	}
 	
 	

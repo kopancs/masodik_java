@@ -20,7 +20,7 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" onAction="#menuitemKilepes" text="Kilepes" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
@@ -48,6 +48,7 @@
                   <Button layoutX="262.0" layoutY="152.0" mnemonicParsing="false" onAction="#hozzaadGomb" text="Hozzáad" />
                   <TextField fx:id="szuletesidatumMezo" layoutX="221.0" layoutY="28.0" />
                   <Label layoutX="221.0" layoutY="6.0" text="Születési dátum" />
+                  <Button layoutX="694.0" layoutY="152.0" mnemonicParsing="false" text="EXIT" />
                </children>
             </AnchorPane>
          </bottom>
